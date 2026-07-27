@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mitali Nimane – Full Stack Developer & UI/UX Designer. Explore my portfolio of projects, skills, and experiences." />
+  <meta name="keywords" content="Mitali Nimane, Portfolio, Developer, UI/UX, Full Stack, Web Design" />
+  <meta property="og:title" content="Mitali Nimane | Portfolio" />
+  <meta property="og:description" content="Full Stack Developer & Creative Technologist" />
+  <title>Mitali Nimane | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══ CUSTOM CURSOR ═══ -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="cursor-trail-container" id="cursorTrailContainer"></div>
+
+  <!-- ═══ LOADER ═══ -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">MN</div>
+      <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+      <span class="loader-text" id="loaderText">Loading experience...</span>
+    </div>
+  </div>
+
+  <!-- ═══ NOISE OVERLAY ═══ -->
+  <div class="noise"></div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo" id="navLogo">
+        <span class="logo-text">Mitali</span>
+        <span class="logo-dot">.</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link" data-text="About">About</a></li>
+        <li><a href="#skills" class="nav-link" data-text="Skills">Skills</a></li>
+        <li><a href="#projects" class="nav-link" data-text="Projects">Projects</a></li>
+        <li><a href="#experience" class="nav-link" data-text="Experience">Experience</a></li>
+        <li><a href="#contact" class="nav-link" data-text="Contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Hire Me</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ MOBILE MENU ═══ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══ HERO SECTION ═══ -->
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="heroCanvas"></canvas>
+
+    <div class="hero-grid-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-line" data-aos="fade-up">Hello, I'm</span>
+        <span class="title-name" data-aos="fade-up" data-aos-delay="100">
+          <span class="name-char" style="--i:0">M</span><span class="name-char" style="--i:1">i</span><span class="name-char" style="--i:2">t</span><span class="name-char" style="--i:3">a</span><span class="name-char" style="--i:4">l</span><span class="name-char" style="--i:5">i</span>
+          <span class="name-space"> </span>
+          <span class="name-char name-char--accent" style="--i:6">N</span><span class="name-char name-char--accent" style="--i:7">i</span><span class="name-char name-char--accent" style="--i:8">m</span><span class="name-char name-char--accent" style="--i:9">a</span><span class="name-char name-char--accent" style="--i:10">n</span><span class="name-char name-char--accent" style="--i:11">e</span>
+        </span>
+        <span class="title-role" data-aos="fade-up" data-aos-delay="200">
+          <span class="role-slider">
+            <span class="role-item active">Full Stack Developer</span>
+            <span class="role-item">UI/UX Designer</span>
+            <span class="role-item">Creative Technologist</span>
+            <span class="role-item">Problem Solver</span>
+          </span>
+        </span>
+      </h1>
+
+      <p class="hero-description" data-aos="fade-up" data-aos-delay="300">
+        Crafting elegant digital experiences with clean code and thoughtful design. Turning complex problems into seamless, beautiful solutions.
+      </p>
+
+      <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
+        <a href="#projects" class="btn btn-primary">
+          <span>View My Work</span>
+          <i class='bx bx-arrow-back bx-rotate-180'></i>
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <span>Let's Talk</span>
+          <i class='bx bx-chat'></i>
+        </a>
+      </div>
+
+      <div class="hero-stats" data-aos="fade-up" data-aos-delay="500">
+        <div class="stat-item">
+          <span class="stat-num" data-target="20">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="5">0</span><span class="stat-suffix">+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
+          <span class="stat-label">Dedication</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-image-wrapper" data-aos="zoom-in" data-aos-delay="200">
+        <div class="image-orbit orbit-1">
+          <div class="orbit-icon"><i class='bx bxl-react'></i></div>
+        </div>
+        <div class="image-orbit orbit-2">
+          <div class="orbit-icon"><i class='bx bxl-python'></i></div>
+        </div>
+        <div class="image-orbit orbit-3">
+          <div class="orbit-icon"><i class='bx bxl-nodejs'></i></div>
+        </div>
+        <div class="image-orbit orbit-4">
+          <div class="orbit-icon"><i class='bx bxl-figma'></i></div>
+        </div>
+        <div class="hero-img-frame">
+          <div class="hero-img-inner">
+            <div class="hero-avatar">
+              <span>MN</span>
+            </div>
+          </div>
+          <div class="img-glow"></div>
+          <div class="img-ring ring-1"></div>
+          <div class="img-ring ring-2"></div>
+          <div class="img-ring ring-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line">
+        <div class="scroll-dot"></div>
+      </div>
+    </div>
+
+    <div class="hero-social">
+      <a href="https://www.linkedin.com/in/mitali-nimane-18979b379/" target="_blank" class="social-link" aria-label="LinkedIn">
+        <i class='bx bxl-linkedin'></i>
+      </a>
+      <a href="https://github.com/" target="_blank" class="social-link" aria-label="GitHub">
+        <i class='bx bxl-github'></i>
+      </a>
+      <a href="mailto:mitali@example.com" class="social-link" aria-label="Email">
+        <i class='bx bx-envelope'></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT SECTION ═══ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Who I Am</span>
+        <h2 class="section-title">About <span class="accent">Me</span></h2>
+        <p class="section-subtitle">A passionate developer crafting digital experiences</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-visual" data-aos="fade-right">
+          <div class="about-img-container">
+            <div class="about-avatar">MN</div>
+            <div class="about-shape shape-1"></div>
+            <div class="about-shape shape-2"></div>
+            <div class="floating-card card-1">
+              <i class='bx bx-code-alt'></i>
+              <span>Clean Code</span>
+            </div>
+            <div class="floating-card card-2">
+              <i class='bx bx-bulb'></i>
+              <span>Creative Solutions</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content" data-aos="fade-left">
+          <h3 class="about-heading">Passionate about building <em>meaningful</em> digital experiences</h3>
+          <p class="about-text">
+            I'm Mitali Nimane, a dedicated Full Stack Developer and UI/UX enthusiast. I love transforming ideas into elegant, functional web applications that leave lasting impressions.
+          </p>
+          <p class="about-text">
+            With a strong foundation in modern web technologies and a keen eye for design, I bridge the gap between beautiful interfaces and robust backend systems. Every project I take on is an opportunity to push boundaries and deliver excellence.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class='bx bx-check-circle'></i>
+              <span>Computer Science undergraduate with strong academics</span>
+            </div>
+            <div class="highlight-item">
+              <i class='bx bx-check-circle'></i>
+              <span>Proficient in React, Node.js, Python & modern web stack</span>
+            </div>
+            <div class="highlight-item">
+              <i class='bx bx-check-circle'></i>
+              <span>Passionate about UI/UX design & user-centered development</span>
+            </div>
+            <div class="highlight-item">
+              <i class='bx bx-check-circle'></i>
+              <span>Quick learner, collaborative team player & problem solver</span>
+            </div>
+          </div>
+
+          <div class="about-actions">
+            <a href="#contact" class="btn btn-primary">
+              <span>Get In Touch</span>
+              <i class='bx bx-send'></i>
+            </a>
+            <a href="#" class="btn btn-outline" id="downloadCV">
+              <span>Download CV</span>
+              <i class='bx bx-download'></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SKILLS SECTION ═══ -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I Know</span>
+        <h2 class="section-title">My <span class="accent">Skills</span></h2>
+        <p class="section-subtitle">Technologies and tools I work with</p>
+      </div>
+
+      <div class="skills-grid" data-aos="fade-up">
+        <!-- Frontend -->
+        <div class="skill-category">
+          <h3 class="category-title"><i class='bx bx-desktop'></i> Frontend</h3>
+          <div class="skill-pills">
+            <div class="skill-pill" data-level="90">
+              <i class='bx bxl-html5'></i>
+              <span>HTML5</span>
+              <div class="pill-progress"><div class="pill-fill" style="--p:90%"></div></div>
+            </div>
+            <div class="skill-pill" data-level="85">
+              <i class='bx bxl-css3'></i>
+              <span>CSS3</span>
+              <div class="pill-progress"><div class="pill-fill" style="--p:85%"></div></div>
+            </div>
+            <div class="skill-pill" data-level="88">
+              <i class='bx bxl-javascript'></i>
+              <span>JavaScript</span>
+              <div class="pill-progress"><div class="pill-fill" style="--p:88%"></div></div>
+            </div>
+            <div class="skill-pill" data-level="82">
+              <i class='bx bxl-react'></i>
+              <span>React.js</span>
+              <div class="pill-progress"><div class="pill-fill" style="--p:82%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-category">
+          <h3 class="category-title"><i class='bx bx-server'></i> Backend</h3>
+          <div class="skill-pills">
+            <div class="skill-pill" data-level="80">
+              <i class='bx bxl-nodejs'></i>
+              <span>Node.js</span>
+              <div class="pill-progress"><div class="pill-fill" style="--p:80%"></div></div>
+            </div>
+            <div class="skill-pill" data-level="78">
+              <i class='bx bxl-python'></i>
+              <span>Python</span>
+              <div class="pill-progress"><div class="pill-fill" style="--p:78%"></div></div>
+            </div>
+            <div class="skill-pill" data-level="75">
+              <i class='bx bx-data'></i>
+              <span>Express.js</span>
+              <div class="pill-progress"><div class="pill-fill" style="--p:75%"></div></div>
+            </div>
+            <div class="skill-pill" data-level="72">
+              <i class='bx bx-cloud'></i>
+              <span>REST APIs</span>
+              <div class="pill-progress"><div class="pill-fill" style="--p:72%"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database & Tools -->
+        <div class="skill-category">
+          <h3 class="category-title"><i class='bx bx-database'></i> Database & Tools</h3>
+          <div class="skill-pills">
+            <div class="skill-pill" data-level="80">
+              <i class='bx bxl-mongodb'></i>
+              <span>MongoDB</span>
+              <div class="pill-progress"><div class="pill-fill" style="--p:80%"></div></div>
+            </div>
+            <div class="skill-pill" data-level="75">
+              <i class='bx bx-table'></i>
+              <span>MySQL</span>
+              <div class="pill-progress"><div class="pill-fill" style="--p:75%"></div></div>
+            </div>
+            <div class="skill-pill" data-level="85">
+              <i class='bx bxl-git'></i>
+              <span>Git</span>
+              <div class="pill-progress"><div class="pill-fill" style="--p:85%"></div></div>
+            </div>
+            <div class="skill-pill" data-level="78">
+              <i class='bx bxl-figma'></i>
+              <span>Figma</span>
+              <div class="pill-progress"><div class="pill-fill" style="--p:78%"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Floating tech tags -->
+      <div class="tech-cloud" data-aos="fade-up" data-aos-delay="200">
+        <span class="tech-tag" style="--delay:0s">TypeScript</span>
+        <span class="tech-tag" style="--delay:0.1s">Tailwind</span>
+        <span class="tech-tag" style="--delay:0.2s">GraphQL</span>
+        <span class="tech-tag" style="--delay:0.3s">Docker</span>
+        <span class="tech-tag" style="--delay:0.4s">Firebase</span>
+        <span class="tech-tag" style="--delay:0.5s">Redux</span>
+        <span class="tech-tag" style="--delay:0.6s">SASS</span>
+        <span class="tech-tag" style="--delay:0.7s">Postman</span>
+        <span class="tech-tag" style="--delay:0.8s">Vercel</span>
+        <span class="tech-tag" style="--delay:0.9s">Netlify</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS SECTION ═══ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What I've Built</span>
+        <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+        <p class="section-subtitle">A selection of my best work</p>
+      </div>
+
+      <div class="projects-filter" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web App</button>
+        <button class="filter-btn" data-filter="ui">UI/UX</button>
+        <button class="filter-btn" data-filter="api">Backend</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-image">
+            <div class="project-placeholder proj-1">
+              <i class='bx bx-cart'></i>
+            </div>
+            <div class="project-overlay">
+              <div class="overlay-actions">
+                <a href="#" class="overlay-btn" aria-label="View Project"><i class='bx bx-link-external'></i></a>
+                <a href="#" class="overlay-btn" aria-label="View Code"><i class='bx bxl-github'></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="proj-tag">React</span>
+              <span class="proj-tag">Node.js</span>
+              <span class="proj-tag">MongoDB</span>
+            </div>
+            <h3 class="project-title">E-Commerce Platform</h3>
+            <p class="project-desc">A full-featured e-commerce web application with authentication, cart management, payment integration, and admin dashboard.</p>
+            <div class="project-footer">
+              <span class="project-number">01</span>
+              <a href="#" class="project-link">View More <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card project-card--featured" data-category="ui" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-image">
+            <div class="project-placeholder proj-2">
+              <i class='bx bx-task'></i>
+            </div>
+            <div class="project-overlay">
+              <div class="overlay-actions">
+                <a href="#" class="overlay-btn" aria-label="View Project"><i class='bx bx-link-external'></i></a>
+                <a href="#" class="overlay-btn" aria-label="View Code"><i class='bx bxl-github'></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="proj-tag">Figma</span>
+              <span class="proj-tag">React</span>
+              <span class="proj-tag">Firebase</span>
+            </div>
+            <h3 class="project-title">Task Management App</h3>
+            <p class="project-desc">A beautiful productivity application with drag-and-drop boards, team collaboration, real-time updates, and analytics dashboard.</p>
+            <div class="project-footer">
+              <span class="project-number">02</span>
+              <a href="#" class="project-link">View More <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card" data-category="api" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-image">
+            <div class="project-placeholder proj-3">
+              <i class='bx bx-cloud-upload'></i>
+            </div>
+            <div class="project-overlay">
+              <div class="overlay-actions">
+                <a href="#" class="overlay-btn" aria-label="View Project"><i class='bx bx-link-external'></i></a>
+                <a href="#" class="overlay-btn" aria-label="View Code"><i class='bx bxl-github'></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">FastAPI</span>
+              <span class="proj-tag">PostgreSQL</span>
+            </div>
+            <h3 class="project-title">REST API Service</h3>
+            <p class="project-desc">Scalable RESTful API with authentication, rate limiting, comprehensive documentation, and automated testing suite.</p>
+            <div class="project-footer">
+              <span class="project-number">03</span>
+              <a href="#" class="project-link">View More <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project-card" data-category="web" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-image">
+            <div class="project-placeholder proj-4">
+              <i class='bx bx-chat'></i>
+            </div>
+            <div class="project-overlay">
+              <div class="overlay-actions">
+                <a href="#" class="overlay-btn" aria-label="View Project"><i class='bx bx-link-external'></i></a>
+                <a href="#" class="overlay-btn" aria-label="View Code"><i class='bx bxl-github'></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="proj-tag">Socket.io</span>
+              <span class="proj-tag">React</span>
+              <span class="proj-tag">Redis</span>
+            </div>
+            <h3 class="project-title">Real-Time Chat App</h3>
+            <p class="project-desc">A real-time messaging platform with rooms, direct messages, file sharing, and online presence indicators.</p>
+            <div class="project-footer">
+              <span class="project-number">04</span>
+              <a href="#" class="project-link">View More <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="project-card" data-category="ui" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-image">
+            <div class="project-placeholder proj-5">
+              <i class='bx bx-health'></i>
+            </div>
+            <div class="project-overlay">
+              <div class="overlay-actions">
+                <a href="#" class="overlay-btn" aria-label="View Project"><i class='bx bx-link-external'></i></a>
+                <a href="#" class="overlay-btn" aria-label="View Code"><i class='bx bxl-github'></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="proj-tag">Figma</span>
+              <span class="proj-tag">Prototyping</span>
+            </div>
+            <h3 class="project-title">Healthcare UI Design</h3>
+            <p class="project-desc">Complete UI/UX design system for a healthcare application including patient dashboard, appointment scheduling, and mobile-first design.</p>
+            <div class="project-footer">
+              <span class="project-number">05</span>
+              <a href="#" class="project-link">View More <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="project-card" data-category="api" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-image">
+            <div class="project-placeholder proj-6">
+              <i class='bx bx-brain'></i>
+            </div>
+            <div class="project-overlay">
+              <div class="overlay-actions">
+                <a href="#" class="overlay-btn" aria-label="View Project"><i class='bx bx-link-external'></i></a>
+                <a href="#" class="overlay-btn" aria-label="View Code"><i class='bx bxl-github'></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <div class="project-tags">
+              <span class="proj-tag">Python</span>
+              <span class="proj-tag">ML</span>
+              <span class="proj-tag">Flask</span>
+            </div>
+            <h3 class="project-title">AI Sentiment Analyzer</h3>
+            <p class="project-desc">Machine learning powered sentiment analysis tool with a clean web interface for analyzing text, reviews, and social media posts.</p>
+            <div class="project-footer">
+              <span class="project-number">06</span>
+              <a href="#" class="project-link">View More <i class='bx bx-right-arrow-alt'></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERIENCE SECTION ═══ -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">My Journey</span>
+        <h2 class="section-title">Experience & <span class="accent">Education</span></h2>
+        <p class="section-subtitle">Where I've been and what I've learned</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-tabs" data-aos="fade-up">
+          <button class="timeline-tab active" data-tab="education">
+            <i class='bx bx-graduation'></i> Education
+          </button>
+          <button class="timeline-tab" data-tab="experience">
+            <i class='bx bx-briefcase'></i> Experience
+          </button>
+        </div>
+
+        <div class="timeline" id="educationTimeline">
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="0">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2022 – Present</div>
+              <h3 class="timeline-title">B.Tech in Computer Science & Engineering</h3>
+              <p class="timeline-org">University / College Name</p>
+              <p class="timeline-desc">Pursuing a Bachelor's degree with focus on software engineering, data structures, algorithms, and web development. Maintaining strong academic performance.</p>
+              <div class="timeline-tags">
+                <span>Data Structures</span>
+                <span>Algorithms</span>
+                <span>DBMS</span>
+                <span>OS</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2020 – 2022</div>
+              <h3 class="timeline-title">Higher Secondary Certificate (HSC)</h3>
+              <p class="timeline-org">Maharashtra State Board</p>
+              <p class="timeline-desc">Completed 12th grade with Science stream, specializing in Mathematics, Physics, and Computer Science. Achieved excellent academic results.</p>
+              <div class="timeline-tags">
+                <span>Science</span>
+                <span>Mathematics</span>
+                <span>Computer Science</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline hidden" id="experienceTimeline">
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="0">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2024 – Present</div>
+              <h3 class="timeline-title">Full Stack Developer Intern</h3>
+              <p class="timeline-org">Tech Company / Startup</p>
+              <p class="timeline-desc">Developing and maintaining full-stack web applications using React.js, Node.js, and MongoDB. Collaborating with cross-functional teams in an agile environment.</p>
+              <div class="timeline-tags">
+                <span>React</span>
+                <span>Node.js</span>
+                <span>MongoDB</span>
+                <span>Agile</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2023</div>
+              <h3 class="timeline-title">Web Development Intern</h3>
+              <p class="timeline-org">Digital Agency</p>
+              <p class="timeline-desc">Built responsive websites and web applications, integrated third-party APIs, and collaborated with designers to implement pixel-perfect UI components.</p>
+              <div class="timeline-tags">
+                <span>HTML/CSS</span>
+                <span>JavaScript</span>
+                <span>APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-date">2023</div>
+              <h3 class="timeline-title">Open Source Contributor</h3>
+              <p class="timeline-org">GitHub Community</p>
+              <p class="timeline-desc">Contributed to open source projects, fixed bugs, added features, and improved documentation. Active participant in hackathons and coding challenges.</p>
+              <div class="timeline-tags">
+                <span>Open Source</span>
+                <span>Git</span>
+                <span>Collaboration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT SECTION ═══ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
+        <p class="section-subtitle">Have a project in mind? Let's bring it to life</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <h3 class="contact-heading">Ready to create something amazing?</h3>
+          <p class="contact-text">Whether you have a project idea, need a collaborator, or just want to say hi — I'd love to hear from you. Let's build something great together!</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon"><i class='bx bx-envelope'></i></div>
+              <div>
+                <span class="contact-label">Email</span>
+                <a href="mailto:mitali@example.com" class="contact-value">mitali@example.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class='bx bxl-linkedin'></i></div>
+              <div>
+                <span class="contact-label">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/mitali-nimane-18979b379/" target="_blank" class="contact-value">mitali-nimane</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class='bx bxl-github'></i></div>
+              <div>
+                <span class="contact-label">GitHub</span>
+                <a href="https://github.com/" target="_blank" class="contact-value">github.com/mitali</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class='bx bx-map'></i></div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Maharashtra, India</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper" data-aos="fade-left">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <div class="form-field">
+                <input type="text" id="name" name="name" placeholder=" " required autocomplete="name" />
+                <label for="name">Your Name</label>
+                <div class="field-line"></div>
+              </div>
+              <div class="form-field">
+                <input type="email" id="email" name="email" placeholder=" " required autocomplete="email" />
+                <label for="email">Your Email</label>
+                <div class="field-line"></div>
+              </div>
+            </div>
+            <div class="form-field">
+              <input type="text" id="subject" name="subject" placeholder=" " required />
+              <label for="subject">Subject</label>
+              <div class="field-line"></div>
+            </div>
+            <div class="form-field">
+              <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+              <label for="message">Your Message</label>
+              <div class="field-line"></div>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit" id="submitBtn">
+              <span>Send Message</span>
+              <i class='bx bx-send'></i>
+              <div class="btn-ripple"></div>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class='bx bx-check-circle'></i>
+              <span>Message sent successfully! I'll get back to you soon.</span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo">Mitali<span>.</span></a>
+          <p>Crafting digital experiences with passion and precision.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/mitali-nimane-18979b379/" target="_blank" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+          <a href="https://github.com/" target="_blank" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+          <a href="mailto:mitali@example.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Mitali Nimane. Crafted with <span class="heart">♥</span> & lots of ☕</p>
+        <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top">
+          <i class='bx bx-chevron-up'></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
