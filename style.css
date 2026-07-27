@@ -606,7 +606,7 @@ input, textarea, select { font-family: inherit; }
 .role-slider {
   display: flex;
   flex-direction: column;
-  animation: roleSlide 12s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  animation: roleSlide 15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 .role-item {
@@ -617,10 +617,11 @@ input, textarea, select { font-family: inherit; }
 }
 
 @keyframes roleSlide {
-  0%, 20%   { transform: translateY(0); }
-  25%, 45%  { transform: translateY(-2em); }
-  50%, 70%  { transform: translateY(-4em); }
-  75%, 95%  { transform: translateY(-6em); }
+  0%, 16%   { transform: translateY(0); }
+  20%, 36%  { transform: translateY(-2em); }
+  40%, 56%  { transform: translateY(-4em); }
+  60%, 76%  { transform: translateY(-6em); }
+  80%, 96%  { transform: translateY(-8em); }
   100%      { transform: translateY(0); }
 }
 
